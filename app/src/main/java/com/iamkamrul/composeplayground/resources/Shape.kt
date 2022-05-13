@@ -1,4 +1,4 @@
-package com.iamkamrul.composeplayground.ui.theme
+package com.iamkamrul.composeplayground.resources
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
