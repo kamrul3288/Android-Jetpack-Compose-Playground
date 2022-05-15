@@ -3,7 +3,7 @@ package com.iamkamrul.composeplayground.entrypoint
 data class ComposePlayGroundData(
     val prefix:String,
     val title:String,
-    val subTitle:String
+    val subTitle:String,
 )
 
 fun composePlayGroundDataList():List<ComposePlayGroundData>{
