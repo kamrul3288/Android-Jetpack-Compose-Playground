@@ -1,7 +1,8 @@
 package com.iamkamrul.composeplayground
 
 internal object Versions {
-    const val compose = "1.2.0-beta01"
+    const val kotlin = "1.6.10"
+    const val compose = "1.1.0"
     const val core_ktx = "1.7.0"
     const val activity_compose = "1.4.0"
     const val lifecycle = "2.4.1"

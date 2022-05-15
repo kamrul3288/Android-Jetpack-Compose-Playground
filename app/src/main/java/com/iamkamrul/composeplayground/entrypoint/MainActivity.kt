@@ -11,7 +11,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.runtime.Composable
@@ -22,10 +21,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.iamkamrul.composeplayground.resources.Blue500
 import com.iamkamrul.composeplayground.resources.Blue700
 import com.iamkamrul.composeplayground.resources.ComposePlaygroundTheme
 import kotlinx.coroutines.CoroutineScope
@@ -105,7 +104,7 @@ fun PlaygroundItem(composePlayGroundData: ComposePlayGroundData){
             .fillMaxWidth()
             .height(80.dp)
             .clip(RoundedCornerShape(8.dp))
-            .background(MaterialTheme.colors.primary),
+            .background(Blue500),
         verticalAlignment = Alignment.CenterVertically
     ){
 
