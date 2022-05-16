@@ -1,4 +1,4 @@
-<h4 >This project is under development. Feature will be update daily basic.</h4>
+<h4 >This project is under development. Feature will be updated daily basic.</h4>
 <h1 align="center">Android Jetpack Compose Playground</h1>
 <div align="center">
   <strong>Declarative UI</strong>
