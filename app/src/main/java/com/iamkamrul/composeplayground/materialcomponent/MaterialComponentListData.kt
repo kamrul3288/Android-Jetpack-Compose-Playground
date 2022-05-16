@@ -1,5 +1,7 @@
 package com.iamkamrul.composeplayground.materialcomponent
 
+import com.iamkamrul.composeplayground.routing.ScreenName
+
 enum class MaterialComponentType{
     TEXT,BUTTON,ICON_AND_IMAGE,TEXT_FIELD,
     TOGGLE_SWITCH_SLIDER,PROGRESSBAR_CHIPS,APP_BAR_AND_NAVIGATION_DRAWER,
@@ -9,12 +11,13 @@ enum class MaterialComponentType{
 
 data class MaterialComponent(
     val title:String,
-    val type:MaterialComponentType
+    val type:MaterialComponentType,
+    val screenName: ScreenName = ScreenName.TextScreen
 )
 
 fun getMaterialComposeListData():List<MaterialComponent>{
     return  listOf(
-        MaterialComponent(title = "Text", type = MaterialComponentType.TEXT),
+        MaterialComponent(title = "Text", type = MaterialComponentType.TEXT, screenName = ScreenName.TextScreen),
         MaterialComponent(title = "Button", type = MaterialComponentType.BUTTON),
         MaterialComponent(title = "Icon & Image", type = MaterialComponentType.ICON_AND_IMAGE),
         MaterialComponent(title = "TextFiled", type = MaterialComponentType.TEXT_FIELD),

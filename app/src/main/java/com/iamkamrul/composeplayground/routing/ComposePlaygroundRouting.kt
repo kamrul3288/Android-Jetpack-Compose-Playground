@@ -10,29 +10,32 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.iamkamrul.composeplayground.entrypoint.PlaygroundListScreen
 import com.iamkamrul.composeplayground.materialcomponent.MaterialComponentListActivity
+import com.iamkamrul.composeplayground.materialcomponent.text.TextScreen
 
-sealed class PlaygroundScreenName{
-    object PlaygroundListScreen:PlaygroundScreenName()
-    object MaterialComponentScreen:PlaygroundScreenName()
+sealed class ScreenName{
+    object PlaygroundListScreen:ScreenName()
+    object MaterialComponentListScreen:ScreenName()
+    object TextScreen:ScreenName()
 }
 
 @Composable
-fun PlaygroundScreenNavigator(){
+fun ScreenNavigator(){
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colors.background
     ) {
-        when(PlaygroundRouting.currentScreen){
-            is PlaygroundScreenName.PlaygroundListScreen-> PlaygroundListScreen()
-            is PlaygroundScreenName.MaterialComponentScreen->MaterialComponentListActivity()
+        when(Navigator.currentScreen){
+            is ScreenName.PlaygroundListScreen-> PlaygroundListScreen()
+            is ScreenName.MaterialComponentListScreen->MaterialComponentListActivity()
+            is ScreenName.TextScreen-> TextScreen()
         }
     }
 }
 
 
-object PlaygroundRouting{
-    var currentScreen:PlaygroundScreenName by mutableStateOf(PlaygroundScreenName.PlaygroundListScreen)
-    fun navigateTo(destination:PlaygroundScreenName){
+object Navigator{
+    var currentScreen:ScreenName by mutableStateOf(ScreenName.PlaygroundListScreen)
+    fun navigateTo(destination:ScreenName){
         currentScreen = destination
     }
 }

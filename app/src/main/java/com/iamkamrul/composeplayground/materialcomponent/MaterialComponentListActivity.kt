@@ -26,8 +26,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.iamkamrul.composeplayground.resources.Blue500
 import com.iamkamrul.composeplayground.resources.Blue700
-import com.iamkamrul.composeplayground.routing.PlaygroundRouting
-import com.iamkamrul.composeplayground.routing.PlaygroundScreenName
+import com.iamkamrul.composeplayground.routing.Navigator
+import com.iamkamrul.composeplayground.routing.ScreenName
 import com.iamkamrul.composeplayground.widget.CustomAppbar
 
 // preview this screen
@@ -42,14 +42,14 @@ fun PreviewMaterialComponentListActivity(){
 fun MaterialComponentListActivity(){
     // handle on back press
     BackHandler(onBack = {
-        PlaygroundRouting.navigateTo(PlaygroundScreenName.PlaygroundListScreen)
+        Navigator.navigateTo(ScreenName.PlaygroundListScreen)
     })
 
     // write @CustomAppbar widget for reducing boilerplate code
     CustomAppbar(
         appBarTitle = "Material Components",
         navigationIconPressed = {
-            PlaygroundRouting.navigateTo(PlaygroundScreenName.PlaygroundListScreen)
+            Navigator.navigateTo(ScreenName.PlaygroundListScreen)
         }
     ) {
         LazyVerticalGrid(
@@ -79,7 +79,7 @@ private fun MaterialComponentItem(materialComponent: MaterialComponent){
         modifier = Modifier
             .fillMaxWidth()
             .clickable {
-
+                Navigator.navigateTo(materialComponent.screenName)
             }
             .height(80.dp)
             .clip(RoundedCornerShape(8.dp))
@@ -113,5 +113,4 @@ private fun MaterialComponentItem(materialComponent: MaterialComponent){
         }
     }
 }
-
 
