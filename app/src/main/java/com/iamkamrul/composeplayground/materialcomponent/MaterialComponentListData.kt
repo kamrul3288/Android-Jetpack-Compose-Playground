@@ -19,7 +19,7 @@ fun getMaterialComposeListData():List<MaterialComponent>{
     return  listOf(
         MaterialComponent(title = "Text", type = MaterialComponentType.TEXT, screenName = ScreenName.TextScreen),
         MaterialComponent(title = "Button", type = MaterialComponentType.BUTTON, screenName = ScreenName.ButtonScreen),
-        MaterialComponent(title = "Icon & Image", type = MaterialComponentType.ICON_AND_IMAGE),
+        MaterialComponent(title = "Icon & Image", type = MaterialComponentType.ICON_AND_IMAGE, screenName = ScreenName.IconAndImageScreen),
         MaterialComponent(title = "TextFiled", type = MaterialComponentType.TEXT_FIELD),
         MaterialComponent(title = "Toggle, Switch, Slider", type = MaterialComponentType.TOGGLE_SWITCH_SLIDER),
         MaterialComponent(title = "Progressbar & Chips", type = MaterialComponentType.PROGRESSBAR_CHIPS),

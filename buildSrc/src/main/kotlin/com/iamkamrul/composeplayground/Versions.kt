@@ -7,6 +7,7 @@ internal object Versions {
     const val core_ktx = "1.7.0"
     const val activity_compose = "1.4.0"
     const val lifecycle = "2.4.1"
+    const val coil_version = "2.1.0"
 
 
     const val junit = "4.13.2"

@@ -11,6 +11,8 @@ object Dependencies {
     const val compose_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
     const val activity_compose = "androidx.activity:activity-compose:${Versions.activity_compose}"
 
+    const val coil_compose = "io.coil-kt:coil-compose:${Versions.coil_version}"
+
 
     const val junit = "junit:junit:${Versions.junit}"
     const val ext_junit = "androidx.test.ext:junit:${Versions.ext_junit}"

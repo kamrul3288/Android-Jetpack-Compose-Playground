@@ -5,6 +5,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -45,161 +46,168 @@ fun ButtonActivity(){
             Navigator.navigateTo(ScreenName.MaterialComponentListScreen)
         }
     ){
-        Column(
-            modifier = Modifier.padding(16.dp)
-        ){
+        LazyColumn{
+            item {
 
-            // text button example
-            TextButton(onClick = { }) {
-                Text(text = "Text Button")
-            }
+                Column(
+                    modifier = Modifier.padding(16.dp)
+                ){
 
-            // text disable button example
-            TextButton(
-                onClick = { },
-                enabled = false
-            ) {
-                Text(text = "Text Button Disabled")
-            }
-
-            //default button example
-            Button(onClick = {}) {
-                Text(text = "Default Button")
-            }
-
-            //default button with custom size example
-            Button(
-                onClick = {},
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(60.dp)
-            ) {
-                Text(text = "Default Button with custom size")
-            }
-
-            //Rounded shape button example
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(
-                onClick = {},
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(40.dp),
-                shape = RoundedCornerShape(30.dp)
-            ) {
-                Text(text = "Rounded shape button")
-            }
-
-            //Custom shape button example
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(
-                onClick = {},
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(40.dp),
-                shape = RoundedCornerShape(topStart = 20.dp, bottomEnd = 20.dp)
-            ) {
-                Text(text = "Custom shape button")
-            }
-
-            val outlineButtonColor: ButtonColors = ButtonDefaults.outlinedButtonColors(
-                contentColor = Blue700,
-
-            )
-
-            //Outline Border button example
-            Spacer(modifier = Modifier.height(16.dp))
-            OutlinedButton(
-                colors = outlineButtonColor,
-                onClick = {},
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(40.dp),
-            ) {
-                Text(text = "Outline Border button")
-            }
-
-            //Custom Outline Border button example
-            Spacer(modifier = Modifier.height(16.dp))
-            OutlinedButton(
-                border = BorderStroke(width = 1.dp, color = Blue700),
-                shape = RoundedCornerShape(30.dp),
-                colors = outlineButtonColor,
-                onClick = {},
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(40.dp),
-            ) {
-                Text(text = "Custom Outline Border button")
-            }
-
-            //Horizontal gradient background button example
-            val horizontalGradient = Brush.horizontalGradient(
-                colors = listOf(Blue700, Color.Magenta),
-                0f,
-                750f
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                text = "Horizontal gradient",
-                color = Color.White,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(40.dp)
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(brush = horizontalGradient)
-                    .wrapContentSize(Alignment.Center)
-                    .clickable {
-
+                    // text button example
+                    TextButton(onClick = { }) {
+                        Text(text = "Text Button")
                     }
-            )
 
-
-            //Vertical gradient background button example
-            val verticalGradient = Brush.verticalGradient(
-                colors = listOf(Blue700, Color.Magenta),
-                0f,
-                150f
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                text = "Vertical gradient",
-                color = Color.White,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(40.dp)
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(brush = verticalGradient)
-                    .wrapContentSize(Alignment.Center)
-                    .clickable {
-
+                    // text disable button example
+                    TextButton(
+                        onClick = { },
+                        enabled = false
+                    ) {
+                        Text(text = "Text Button Disabled")
                     }
-            )
 
-
-            //Swipe button example
-            Spacer(modifier = Modifier.height(16.dp))
-            val swipeButtonState = remember {
-                mutableStateOf(SwipeButtonState.INITIAL)
-            }
-            val coroutineScope = rememberCoroutineScope()
-            SwipeButton(
-                onSwiped = {
-                    swipeButtonState.value = SwipeButtonState.SWIPED
-                    coroutineScope.launch {
-                        swipeButtonState.value = SwipeButtonState.COLLAPSED
+                    //default button example
+                    Button(onClick = {}) {
+                        Text(text = "Default Button")
                     }
-                },
-                swipeButtonState = swipeButtonState.value,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(45.dp),
-                iconPadding = PaddingValues(4.dp),
-                shape = CircleShape,
-            ) {
-                Text(text = "Swipe Button", color = Color.White)
+
+                    //default button with custom size example
+                    Button(
+                        onClick = {},
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(60.dp)
+                    ) {
+                        Text(text = "Default Button with custom size")
+                    }
+
+                    //Rounded shape button example
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Button(
+                        onClick = {},
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(40.dp),
+                        shape = RoundedCornerShape(30.dp)
+                    ) {
+                        Text(text = "Rounded shape button")
+                    }
+
+                    //Custom shape button example
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Button(
+                        onClick = {},
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(40.dp),
+                        shape = RoundedCornerShape(topStart = 20.dp, bottomEnd = 20.dp)
+                    ) {
+                        Text(text = "Custom shape button")
+                    }
+
+                    val outlineButtonColor: ButtonColors = ButtonDefaults.outlinedButtonColors(
+                        contentColor = Blue700,
+
+                        )
+
+                    //Outline Border button example
+                    Spacer(modifier = Modifier.height(16.dp))
+                    OutlinedButton(
+                        colors = outlineButtonColor,
+                        onClick = {},
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(40.dp),
+                    ) {
+                        Text(text = "Outline Border button")
+                    }
+
+                    //Custom Outline Border button example
+                    Spacer(modifier = Modifier.height(16.dp))
+                    OutlinedButton(
+                        border = BorderStroke(width = 1.dp, color = Blue700),
+                        shape = RoundedCornerShape(30.dp),
+                        colors = outlineButtonColor,
+                        onClick = {},
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(40.dp),
+                    ) {
+                        Text(text = "Custom Outline Border button")
+                    }
+
+                    //Horizontal gradient background button example
+                    val horizontalGradient = Brush.horizontalGradient(
+                        colors = listOf(Blue700, Color.Magenta),
+                        0f,
+                        750f
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = "Horizontal gradient",
+                        color = Color.White,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(40.dp)
+                            .clip(RoundedCornerShape(4.dp))
+                            .background(brush = horizontalGradient)
+                            .wrapContentSize(Alignment.Center)
+                            .clickable {
+
+                            }
+                    )
+
+
+                    //Vertical gradient background button example
+                    val verticalGradient = Brush.verticalGradient(
+                        colors = listOf(Blue700, Color.Magenta),
+                        0f,
+                        150f
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = "Vertical gradient",
+                        color = Color.White,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(40.dp)
+                            .clip(RoundedCornerShape(4.dp))
+                            .background(brush = verticalGradient)
+                            .wrapContentSize(Alignment.Center)
+                            .clickable {
+
+                            }
+                    )
+
+
+                    //Swipe button example
+                    Spacer(modifier = Modifier.height(16.dp))
+                    val swipeButtonState = remember {
+                        mutableStateOf(SwipeButtonState.INITIAL)
+                    }
+                    val coroutineScope = rememberCoroutineScope()
+                    SwipeButton(
+                        onSwiped = {
+                            swipeButtonState.value = SwipeButtonState.SWIPED
+                            coroutineScope.launch {
+                                swipeButtonState.value = SwipeButtonState.COLLAPSED
+                            }
+                        },
+                        swipeButtonState = swipeButtonState.value,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(45.dp),
+                        iconPadding = PaddingValues(4.dp),
+                        shape = CircleShape,
+                    ) {
+                        Text(text = "Swipe Button", color = Color.White)
+                    }
+
+
+                }
+
+
             }
-
-
         }
     }
 }

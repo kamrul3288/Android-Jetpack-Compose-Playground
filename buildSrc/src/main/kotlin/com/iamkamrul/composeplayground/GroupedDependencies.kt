@@ -9,6 +9,9 @@ internal val lifeCycleDependencies = listOf(
     Dependencies.lifecycle_runtime,
 )
 
+internal val imageLoaderDependencies = listOf(
+    Dependencies.coil_compose,
+)
 
 internal val composeDependencies = listOf(
     Dependencies.compose_ui,

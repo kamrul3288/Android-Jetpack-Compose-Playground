@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import com.iamkamrul.composeplayground.entrypoint.PlaygroundListScreen
 import com.iamkamrul.composeplayground.materialcomponent.MaterialComponentListActivity
 import com.iamkamrul.composeplayground.materialcomponent.button.ButtonActivity
+import com.iamkamrul.composeplayground.materialcomponent.iconandimage.IconAndImageActivity
 import com.iamkamrul.composeplayground.materialcomponent.text.TextScreen
 
 sealed class ScreenName{
@@ -18,6 +19,7 @@ sealed class ScreenName{
     object MaterialComponentListScreen:ScreenName()
     object TextScreen:ScreenName()
     object ButtonScreen:ScreenName()
+    object IconAndImageScreen:ScreenName()
 }
 
 @Composable
@@ -31,6 +33,7 @@ fun ScreenNavigator(){
             is ScreenName.MaterialComponentListScreen->MaterialComponentListActivity()
             is ScreenName.TextScreen-> TextScreen()
             is ScreenName.ButtonScreen-> ButtonActivity()
+            is ScreenName.IconAndImageScreen-> IconAndImageActivity()
         }
     }
 }

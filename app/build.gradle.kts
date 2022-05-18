@@ -60,6 +60,7 @@ dependencies {
     addAndroidxDependencies()
     addLifeCycleDependencies()
     addComposeDependencies()
+    addImageLoaderDependencies()
     addAndroidTestsDependencies()
 }
 

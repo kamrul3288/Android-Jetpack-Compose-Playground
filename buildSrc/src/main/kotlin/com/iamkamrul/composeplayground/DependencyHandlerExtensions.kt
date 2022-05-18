@@ -20,6 +20,12 @@ fun DependencyHandler.addComposeDependencies() {
     }
 }
 
+fun DependencyHandler.addImageLoaderDependencies() {
+    imageLoaderDependencies.forEach {
+        add("implementation",it)
+    }
+}
+
 
 
 fun DependencyHandler.addAndroidTestsDependencies() {
