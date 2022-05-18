@@ -12,6 +12,7 @@ internal val lifeCycleDependencies = listOf(
 
 internal val composeDependencies = listOf(
     Dependencies.compose_ui,
+    Dependencies.compose_material3,
     Dependencies.compose_material,
     Dependencies.compose_preview,
     Dependencies.activity_compose,
