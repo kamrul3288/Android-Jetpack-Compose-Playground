@@ -13,6 +13,7 @@ import com.iamkamrul.composeplayground.materialcomponent.MaterialComponentListAc
 import com.iamkamrul.composeplayground.materialcomponent.button.ButtonActivity
 import com.iamkamrul.composeplayground.materialcomponent.iconandimage.IconAndImageActivity
 import com.iamkamrul.composeplayground.materialcomponent.text.TextScreen
+import com.iamkamrul.composeplayground.materialcomponent.textfield.TextFieldActivity
 
 sealed class ScreenName{
     object PlaygroundListScreen:ScreenName()
@@ -20,6 +21,7 @@ sealed class ScreenName{
     object TextScreen:ScreenName()
     object ButtonScreen:ScreenName()
     object IconAndImageScreen:ScreenName()
+    object TextFieldScreen:ScreenName()
 }
 
 @Composable
@@ -34,6 +36,7 @@ fun ScreenNavigator(){
             is ScreenName.TextScreen-> TextScreen()
             is ScreenName.ButtonScreen-> ButtonActivity()
             is ScreenName.IconAndImageScreen-> IconAndImageActivity()
+            is ScreenName.TextFieldScreen-> TextFieldActivity()
         }
     }
 }

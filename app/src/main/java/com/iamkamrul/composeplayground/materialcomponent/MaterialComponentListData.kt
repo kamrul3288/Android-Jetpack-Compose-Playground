@@ -20,7 +20,7 @@ fun getMaterialComposeListData():List<MaterialComponent>{
         MaterialComponent(title = "Text", type = MaterialComponentType.TEXT, screenName = ScreenName.TextScreen),
         MaterialComponent(title = "Button", type = MaterialComponentType.BUTTON, screenName = ScreenName.ButtonScreen),
         MaterialComponent(title = "Icon & Image", type = MaterialComponentType.ICON_AND_IMAGE, screenName = ScreenName.IconAndImageScreen),
-        MaterialComponent(title = "TextFiled", type = MaterialComponentType.TEXT_FIELD),
+        MaterialComponent(title = "TextFiled", type = MaterialComponentType.TEXT_FIELD, screenName = ScreenName.TextFieldScreen),
         MaterialComponent(title = "Toggle, Switch, Slider", type = MaterialComponentType.TOGGLE_SWITCH_SLIDER),
         MaterialComponent(title = "Progressbar & Chips", type = MaterialComponentType.PROGRESSBAR_CHIPS),
         MaterialComponent(title = "Appbars & Navigatin Drawer", type = MaterialComponentType.APP_BAR_AND_NAVIGATION_DRAWER),
