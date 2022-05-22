@@ -12,6 +12,7 @@ import com.iamkamrul.composeplayground.entrypoint.PlaygroundListScreen
 import com.iamkamrul.composeplayground.materialcomponent.MaterialComponentListActivity
 import com.iamkamrul.composeplayground.materialcomponent.button.ButtonActivity
 import com.iamkamrul.composeplayground.materialcomponent.iconandimage.IconAndImageActivity
+import com.iamkamrul.composeplayground.materialcomponent.radioswitchslider.RadioSwitchSliderActivity
 import com.iamkamrul.composeplayground.materialcomponent.text.TextScreen
 import com.iamkamrul.composeplayground.materialcomponent.textfield.TextFieldActivity
 
@@ -22,6 +23,7 @@ sealed class ScreenName{
     object ButtonScreen:ScreenName()
     object IconAndImageScreen:ScreenName()
     object TextFieldScreen:ScreenName()
+    object RadioSwitchSliderScreen:ScreenName()
 }
 
 @Composable
@@ -37,6 +39,7 @@ fun ScreenNavigator(){
             is ScreenName.ButtonScreen-> ButtonActivity()
             is ScreenName.IconAndImageScreen-> IconAndImageActivity()
             is ScreenName.TextFieldScreen-> TextFieldActivity()
+            is ScreenName.RadioSwitchSliderScreen-> RadioSwitchSliderActivity()
         }
     }
 }
