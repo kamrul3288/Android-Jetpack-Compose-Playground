@@ -1,5 +1,6 @@
 package com.iamkamrul.composeplayground.materialcomponent.iconandimage
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -35,6 +36,12 @@ fun PreviewIconAndImageActivity(){
 
 @Composable
 fun IconAndImageActivity(){
+    // handle on back press
+    BackHandler(onBack ={
+        Navigator.navigateTo(ScreenName.MaterialComponentListScreen)
+    })
+
+
     CustomAppbar(
         appBarTitle = "Icon & Image",
         navigationIconPressed = {
