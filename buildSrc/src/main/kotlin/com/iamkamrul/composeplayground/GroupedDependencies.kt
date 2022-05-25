@@ -19,6 +19,7 @@ internal val composeDependencies = listOf(
     Dependencies.compose_material,
     Dependencies.compose_preview,
     Dependencies.activity_compose,
+    Dependencies.compose_navigation,
 )
 
 

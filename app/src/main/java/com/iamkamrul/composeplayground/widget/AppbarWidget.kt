@@ -30,3 +30,22 @@ fun CustomAppbar(
         content = content
     )
 }
+
+@Composable
+fun CustomTopAppbar(
+    appBarTitle:String,
+    navigationIconPressed: (() -> Unit)? = null,
+){
+    TopAppBar(
+        title = {
+            Text(text = appBarTitle)
+        },
+        navigationIcon = {
+            IconButton(onClick = {
+                navigationIconPressed?.invoke()
+            }){
+                Icon(imageVector = Icons.Filled.ArrowBack, contentDescription = "Back")
+            }
+        }
+    )
+}

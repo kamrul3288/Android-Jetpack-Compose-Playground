@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import com.iamkamrul.composeplayground.entrypoint.PlaygroundListScreen
 import com.iamkamrul.composeplayground.materialcomponent.MaterialComponentListActivity
 import com.iamkamrul.composeplayground.materialcomponent.appbarandnavdrawer.AppbarAndNavDrawerActivity
+import com.iamkamrul.composeplayground.materialcomponent.bottomnavigation.BottomNavigationActivity
 import com.iamkamrul.composeplayground.materialcomponent.button.ButtonActivity
 import com.iamkamrul.composeplayground.materialcomponent.iconandimage.IconAndImageActivity
 import com.iamkamrul.composeplayground.materialcomponent.progressbarandchips.ProgressbarAndChipActivity
@@ -28,6 +29,7 @@ sealed class ScreenName{
     object RadioSwitchSliderScreen:ScreenName()
     object ProgressbarAndChipScreen:ScreenName()
     object AppbarAndNavDrawerScreen:ScreenName()
+    object BottomNavigationScreen:ScreenName()
 }
 
 @Composable
@@ -46,6 +48,7 @@ fun ScreenNavigator(){
             is ScreenName.RadioSwitchSliderScreen-> RadioSwitchSliderActivity()
             ScreenName.ProgressbarAndChipScreen -> ProgressbarAndChipActivity()
             ScreenName.AppbarAndNavDrawerScreen -> AppbarAndNavDrawerActivity()
+            ScreenName.BottomNavigationScreen -> BottomNavigationActivity()
         }
     }
 }
