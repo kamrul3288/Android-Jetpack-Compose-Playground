@@ -39,8 +39,7 @@ fun BottomNavigationActivity(){
             CustomTopAppbar(
                 appBarTitle = "Bottom Navigation",
                 navigationIconPressed = {
-                    if (navBackStackEntry?.destination?.route == BottomNavItem.Home.route)
-                        Navigator.navigateTo(ScreenName.MaterialComponentListScreen)
+                    Navigator.navigateTo(ScreenName.MaterialComponentListScreen)
                 }
             )
         },
