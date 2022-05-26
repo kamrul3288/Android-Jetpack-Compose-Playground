@@ -25,7 +25,7 @@ fun getMaterialComposeListData():List<MaterialComponent>{
         MaterialComponent(title = "Progressbar & Chips", type = MaterialComponentType.PROGRESSBAR_CHIPS, screenName = ScreenName.ProgressbarAndChipScreen),
         MaterialComponent(title = "Appbars & Navigatin Drawer", type = MaterialComponentType.APP_BAR_AND_NAVIGATION_DRAWER, screenName = ScreenName.AppbarAndNavDrawerScreen),
         MaterialComponent(title = "Bottom Navigation", type = MaterialComponentType.BOTTOM_NAVIGATION_BAR, screenName = ScreenName.BottomNavigationScreen),
-        MaterialComponent(title = "Dialogs", type = MaterialComponentType.DIALOGS),
+        MaterialComponent(title = "Dialogs", type = MaterialComponentType.DIALOGS, screenName = ScreenName.DialogsScreen),
         MaterialComponent(title = "Bottom sheet", type = MaterialComponentType.BOTTOM_SHEET),
         MaterialComponent(title = "Tab layout", type = MaterialComponentType.TAG_LAYOUT),
         MaterialComponent(title = "Pull Refresh", type = MaterialComponentType.PULL_REFRESH),

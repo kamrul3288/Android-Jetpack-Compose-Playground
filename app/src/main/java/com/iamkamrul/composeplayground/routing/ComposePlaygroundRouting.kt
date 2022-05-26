@@ -13,6 +13,7 @@ import com.iamkamrul.composeplayground.materialcomponent.MaterialComponentListAc
 import com.iamkamrul.composeplayground.materialcomponent.appbarandnavdrawer.AppbarAndNavDrawerActivity
 import com.iamkamrul.composeplayground.materialcomponent.bottomnavigation.BottomNavigationActivity
 import com.iamkamrul.composeplayground.materialcomponent.button.ButtonActivity
+import com.iamkamrul.composeplayground.materialcomponent.dialogs.DialogsActivity
 import com.iamkamrul.composeplayground.materialcomponent.iconandimage.IconAndImageActivity
 import com.iamkamrul.composeplayground.materialcomponent.progressbarandchips.ProgressbarAndChipActivity
 import com.iamkamrul.composeplayground.materialcomponent.radioswitchslider.RadioSwitchSliderActivity
@@ -30,6 +31,7 @@ sealed class ScreenName{
     object ProgressbarAndChipScreen:ScreenName()
     object AppbarAndNavDrawerScreen:ScreenName()
     object BottomNavigationScreen:ScreenName()
+    object DialogsScreen:ScreenName()
 }
 
 @Composable
@@ -39,16 +41,17 @@ fun ScreenNavigator(){
         color = MaterialTheme.colors.background
     ) {
         when(Navigator.currentScreen){
-            is ScreenName.PlaygroundListScreen-> PlaygroundListScreen()
-            is ScreenName.MaterialComponentListScreen->MaterialComponentListActivity()
-            is ScreenName.TextScreen-> TextScreen()
-            is ScreenName.ButtonScreen-> ButtonActivity()
-            is ScreenName.IconAndImageScreen-> IconAndImageActivity()
-            is ScreenName.TextFieldScreen-> TextFieldActivity()
-            is ScreenName.RadioSwitchSliderScreen-> RadioSwitchSliderActivity()
+            ScreenName.PlaygroundListScreen-> PlaygroundListScreen()
+            ScreenName.MaterialComponentListScreen->MaterialComponentListActivity()
+            ScreenName.TextScreen-> TextScreen()
+            ScreenName.ButtonScreen-> ButtonActivity()
+            ScreenName.IconAndImageScreen-> IconAndImageActivity()
+            ScreenName.TextFieldScreen-> TextFieldActivity()
+            ScreenName.RadioSwitchSliderScreen-> RadioSwitchSliderActivity()
             ScreenName.ProgressbarAndChipScreen -> ProgressbarAndChipActivity()
             ScreenName.AppbarAndNavDrawerScreen -> AppbarAndNavDrawerActivity()
             ScreenName.BottomNavigationScreen -> BottomNavigationActivity()
+            ScreenName.DialogsScreen -> DialogsActivity()
         }
     }
 }
