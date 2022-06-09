@@ -12,6 +12,7 @@ import com.iamkamrul.composeplayground.entrypoint.PlaygroundListScreen
 import com.iamkamrul.composeplayground.materialcomponent.MaterialComponentListActivity
 import com.iamkamrul.composeplayground.materialcomponent.appbarandnavdrawer.AppbarAndNavDrawerActivity
 import com.iamkamrul.composeplayground.materialcomponent.bottomnavigation.BottomNavigationActivity
+import com.iamkamrul.composeplayground.materialcomponent.bottomsheet.BottomSheetActivity
 import com.iamkamrul.composeplayground.materialcomponent.button.ButtonActivity
 import com.iamkamrul.composeplayground.materialcomponent.dialogs.DialogsActivity
 import com.iamkamrul.composeplayground.materialcomponent.iconandimage.IconAndImageActivity
@@ -32,6 +33,7 @@ sealed class ScreenName{
     object AppbarAndNavDrawerScreen:ScreenName()
     object BottomNavigationScreen:ScreenName()
     object DialogsScreen:ScreenName()
+    object BottomSheetScreen:ScreenName()
 }
 
 @Composable
@@ -52,6 +54,7 @@ fun ScreenNavigator(){
             ScreenName.AppbarAndNavDrawerScreen -> AppbarAndNavDrawerActivity()
             ScreenName.BottomNavigationScreen -> BottomNavigationActivity()
             ScreenName.DialogsScreen -> DialogsActivity()
+            ScreenName.BottomSheetScreen -> BottomSheetActivity()
         }
     }
 }
